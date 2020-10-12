@@ -12,7 +12,7 @@ public class EnemyPatrol : MonoBehaviour {
 
 	// Start is called before the first frame update
 	void Start() {
-		UpdateTarget();
+		this.UpdateTarget();
 		StartCoroutine("PatrolToTarget");
 	}
 
@@ -24,50 +24,46 @@ public class EnemyPatrol : MonoBehaviour {
 
 	private void UpdateTarget() {
 		// If first time, create target in the left
-		if (_target == null) {
-			_target = new GameObject("Target");
-			_target.transform.position = new Vector2(minX, transform.position.y);
-			transform.localScale = new Vector3(-1, 1, 1);
+		if (this._target == null) {
+			this._target = new GameObject("Target");
+			this._target.transform.position = new Vector2(this.minX, this.transform.position.y);
+			this.transform.localScale = new Vector3(-1, 1, 1);
 			return;
 		}
-
 		// If we are in the left, change target to the right
-		if (_target.transform.position.x == minX) {
-			_target.transform.position = new Vector2(maxX, transform.position.y);
-			transform.localScale = new Vector3(1, 1, 1);
+		if (this._target.transform.position.x == this.minX) {
+			this._target.transform.position = new Vector2(this.maxX, this.transform.position.y);
+			this.transform.localScale = new Vector3(1, 1, 1);
 		}
-
 		// If we are in the right, change target to the left
-		else if (_target.transform.position.x == maxX) {
-			_target.transform.position = new Vector2(minX, transform.position.y);
-			transform.localScale = new Vector3(-1, 1, 1);
+		else if (this._target.transform.position.x == this.maxX) {
+			this._target.transform.position = new Vector2(this.minX, this.transform.position.y);
+			this.transform.localScale = new Vector3(-1, 1, 1);
 		}
 	}
 
 	private IEnumerator PatrolToTarget() {
 		// Coroutine to move the enemy
-		while (Vector2.Distance(transform.position, _target.transform.position) > 0.05f) {
+		while (Vector2.Distance(this.transform.position, this._target.transform.position) > 0.05f) {
 			// let's move to the target
-			Vector2 direction = _target.transform.position - transform.position;
+			Vector2 direction = this._target.transform.position - this.transform.position;
 			float xDirection = direction.x;
-
-			transform.Translate(direction.normalized * speed * Time.deltaTime);
-
+			this.transform.Translate(direction.normalized * speed * Time.deltaTime);
 			// IMPORTANT
 			yield return null;
 		}
 
 		// At this point, i've reached the target, let's set our position to the target's one
 		Debug.Log("Target reached");
-		transform.position = new Vector2(_target.transform.position.x, transform.position.y);
+		this.transform.position = new Vector2(this._target.transform.position.x, this.transform.position.y);
 
 		// And let's wait for a moment
-		Debug.Log("Waiting for " + waitingTime + " seconds");
-		yield return new WaitForSeconds(waitingTime); // IMPORTANT
+		Debug.Log("Waiting for " + this.waitingTime + " seconds");
+		yield return new WaitForSeconds(this.waitingTime); // IMPORTANT
 
 		// once waited, let's restore the patrol behaviour
 		Debug.Log("Waited enough, let's update the target and move again");
-		UpdateTarget();
+		this.UpdateTarget();
 		StartCoroutine("PatrolToTarget");
 	}
 }
