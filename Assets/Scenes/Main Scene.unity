@@ -753,13 +753,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy With Big Weapon
       objectReference: {fileID: 0}
-    - target: {fileID: 4894739630113371124, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.052
-      objectReference: {fileID: 0}
-    - target: {fileID: 4894739630113371124, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.112
+    - target: {fileID: 2612452587538226124, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
@@ -773,6 +769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1305688990}
   - component: {fileID: 1305688989}
+  - component: {fileID: 1305688991}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -820,12 +817,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 08ace3724a70a2042abf5c0a3832c7e7, type: 3}
+  m_Sprite: {fileID: -7366105205617024175, guid: ddabd2b07ca4ec94eb69e641647ddf37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.85333335, y: 0.85333335}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -845,6 +842,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1305688991
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305688988}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e4546cf839f8db4d84f33ec6751ec7e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1495513162
 GameObject:
   m_ObjectHideFlags: 0
