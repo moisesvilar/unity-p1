@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy With Small Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 2612452587538226124, guid: 62ccfd3e27796fb4784f98e950b72f53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6941839725734097950, guid: 62ccfd3e27796fb4784f98e950b72f53, type: 3}
       propertyPath: shooter
       value: 
@@ -772,6 +776,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2612452587538226124, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
   m_PrefabInstance: {fileID: 1297271112}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1058720795
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058720794}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c606d20c88e11294a8a84fd847c924a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1221648061 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2612452587538226124, guid: 62ccfd3e27796fb4784f98e950b72f53, type: 3}
@@ -803,10 +826,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 883064921248259992, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.111
+      objectReference: {fileID: 0}
+    - target: {fileID: 883064921248259992, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.178
+      objectReference: {fileID: 0}
+    - target: {fileID: 883064921248259992, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.30358514
+      objectReference: {fileID: 0}
+    - target: {fileID: 883064921248259992, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9528043
+      objectReference: {fileID: 0}
+    - target: {fileID: 883064921248259992, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -35.346
+      objectReference: {fileID: 0}
+    - target: {fileID: 883064921248259992, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 883064921248259992, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 883064921248259992, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 883064921248259992, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 883064921248259992, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 883064921248259993, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 306236599138051366, guid: ed4321b4f8c8cfc45a492683a18521d9, type: 3}
     - target: {fileID: 883064921248259994, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
       propertyPath: shooter
       value: 
       objectReference: {fileID: 1058720794}
+    - target: {fileID: 883064921248259995, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2612452587538226114, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.4632197
@@ -855,6 +926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy With Big Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 2612452587538226125, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -149580961759692246, guid: 06283f4877e4b3d44a43941d92a5b4bf, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 078659de601a94d4fbbcc0f7326c3750, type: 3}
 --- !u!1 &1305688988
