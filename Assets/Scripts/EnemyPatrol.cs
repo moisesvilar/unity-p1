@@ -21,7 +21,6 @@ public class EnemyPatrol : MonoBehaviour {
 
 	}
 
-
 	private void UpdateTarget() {
 		// If first time, create target in the left
 		if (this._target == null) {
