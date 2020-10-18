@@ -65,9 +65,7 @@ public class EnemyPatrol : MonoBehaviour {
 		this.transform.position = new Vector2(this._target.transform.position.x, this.transform.position.y);
 		this.UpdateTarget();
 		this._animator.SetBool("Idle", true);
-		if (this._weapon != null) {
-			this._weapon.Shoot();
-        }
+		this._animator.SetTrigger("Shoot");
 
 		// And let's wait for a moment
 		Debug.Log("Waiting for " + this.waitingTime + " seconds");
@@ -77,4 +75,10 @@ public class EnemyPatrol : MonoBehaviour {
 		Debug.Log("Waited enough, let's update the target and move again");
 		this.StartCoroutine("PatrolToTarget");
 	}
+
+	void CanShoot() {
+		if (this._weapon != null) {
+			this._weapon.Shoot();
+        }
+    }
 }
